@@ -39,8 +39,8 @@ module.exports = {
           },
           path: "app",
           xformers: false,
-          triton: false,
-          sageattention: false
+          triton: true,
+          sageattention: true
         }
       }
     },
