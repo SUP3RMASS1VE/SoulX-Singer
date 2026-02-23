@@ -45,6 +45,19 @@ module.exports = {
       }
     },
     {
+      method: "shell.run",
+      params: {
+        conda: {
+          path: "conda_env",
+          python: "python=3.10"
+        },
+        path: "app",
+        message: [
+          "python -m nltk.downloader averaged_perceptron_tagger_eng"
+        ]
+      }
+    },
+    {
       method: "hf.download",
       params: {
         path: "app",
