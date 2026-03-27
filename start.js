@@ -17,7 +17,8 @@ module.exports = {
         env: {},
         path: "app",
         message: [
-          "python webui.py --port {{local.port}}",
+          "python -c \"import os; os.makedirs('tmp', exist_ok=True)\"",
+          "set TMPDIR={{path.resolve(cwd, 'app', 'tmp')}} && python webui.py --port {{local.port}}",
         ],
         on: [{
           event: "/http:\\/\\/\\S+:(\\d+)/",

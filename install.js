@@ -53,7 +53,9 @@ module.exports = {
         },
         path: "app",
         message: [
-          "python -m nltk.downloader averaged_perceptron_tagger_eng"
+          "uv pip install nemo_toolkit[asr]==2.6.1",
+          "uv pip install transformers==4.41.2",
+          "python -m nltk.downloader averaged_perceptron_tagger_eng cmudict"
         ]
       }
     },
