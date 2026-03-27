@@ -1,0 +1,4 @@
+app/
+conda_env/
+logs/
+app/tmp/
